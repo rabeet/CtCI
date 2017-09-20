@@ -20,7 +20,9 @@ public class Prob1_8 {
 	 */
 
 	public static void main(String[] args) {
-		System.out.println(isRotation("police", "elic"));
+		System.out.println(isRotation("police", "poliec"));
+		System.out.println(isSubstringLocal("policei", "pice"));
+		System.out.println(isRotationEasy("police", "licepo"));
 	}
 	
 	public static boolean isRotation(String s1, String s2) {
@@ -38,11 +40,11 @@ public class Prob1_8 {
 		return false;
 	}
 	
-	/*
-	 * eg: "police", inp: "licepo"
-	 * 
-	 *
-	 */
+	public static boolean isRotationEasy(String s1, String s2) {
+		if (s1.length() != 0 && s1.length() != s2.length()) return false;
+		String s1s1 = s1 + s1;
+		return isSubstring(s1s1,s2);
+	}
 	
 	// Rotate a string once
 	public static String rotateOnce(String s) {
@@ -54,7 +56,23 @@ public class Prob1_8 {
 		return ans;
 	}
 
-	public static boolean isSubstring() {
+	// return true if s2 is a substring of s1
+	public static boolean isSubstring(String s1, String s2) {
+		int ind = s1.indexOf(s2);
+		System.out.println(ind);
+		return (ind >= 0);
+	}
+	
+	// own implementation of issubstring
+	public static boolean isSubstringLocal(String s1, String s2) {
+		for (int i = 0; i < s1.length(); i++) {
+			if (s1.charAt(i) == s2.charAt(0)) {
+				for (int j = 0; j < s2.length(); j++) {
+					if ((i+j) < s1.length() && s1.charAt(i+j) != s2.charAt(j))
+						return false;
+				}
+			}
+		}
 		return true;
 	}
 }

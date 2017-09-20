@@ -26,11 +26,12 @@ class Node {
 	}
 	
 	public static Node populateList(int limit) {
+		limit = 9;
 		Random random = new Random();
-		Node node = new Node(random.nextInt(limit));
+		Node node = new Node((limit));
 		Node ret = node;
-		for (int i = 1; i < limit; i++) {
-			node.next = new Node(random.nextInt(limit));
+		for (int i = 1; i < 3; i++) {
+			node.next = new Node((limit));
 			node = node.next;
 		}
 		return ret;

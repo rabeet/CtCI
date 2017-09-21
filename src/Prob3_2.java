@@ -18,6 +18,7 @@ public class Prob3_2 {
 	 * They all should have O(1) complexity
 	 * 
 	 * ANS: just keep a min element WITHIN EACH NODE and maintain it after every push
+	 * Can also maintain another stack for mins
 	 */
 	public static void main(String[] args) {
 		StackWithMin stack = new StackWithMin();

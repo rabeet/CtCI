@@ -8,6 +8,26 @@ public class Utilities {
 
 }
 
+class TreeNode {
+	public int data;
+	public TreeNode left;
+	public TreeNode right;
+	public TreeNode (int data) {
+		this.data = data;
+	}
+	
+	public String toString() {
+		return toString(this, 0);
+	}
+	
+	public String toString(TreeNode node, int level) {
+		if (node == null) return "";
+		String spc = " ";
+		for (int i = 0; i < level; i++) spc += " ";
+		return ""+node.data+spc+toString(node.left,level+1)+toString(node.right, level+1);
+	}
+}
+
 class Node {
 	public int data;
 	public Node next;

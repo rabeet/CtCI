@@ -65,6 +65,21 @@ class TreeNode {
 		this.data = data;
 	}
 	
+	public static TreeNode serializeTree(int[] arr) {
+		if (arr == null) return null;
+		return popNode(arr, 0);
+	}
+	
+	private static TreeNode popNode(int[] arr, int i) {
+
+		if (i >= arr.length) return null;
+		TreeNode node = new TreeNode(arr[i]);
+		node.left = popNode(arr, 2*i+1);
+		node.right = popNode(arr, 2*i+2);
+		return node;
+	
+	}
+	
 	public String toString() {
 		return toString(this);
 	}

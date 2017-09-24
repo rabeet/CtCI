@@ -66,14 +66,25 @@ class TreeNode {
 	}
 	
 	public String toString() {
-		return toString(this, 0);
+		return toString(this);
 	}
 	
-	public String toString(TreeNode node, int level) {
+	public String toString(TreeNode node) {
 		if (node == null) return "";
-		String spc = " ";
-		for (int i = 0; i < level; i++) spc += " ";
-		return ""+node.data+spc+toString(node.left,level+1)+toString(node.right, level+1);
+		String ans = ""+node.data+"\n";
+		boolean temp = false;
+		if (node.left != null) {
+			ans += node.left.data+" ";
+			temp = true;
+		}
+		if (node.right != null) {
+			ans += node.right.data+" ";
+			temp = true;
+		}
+		ans +=(!temp)?"NO CHILDREN\n":"\n";
+		ans += toString(node.left);
+		ans += toString(node.right);
+		return ans;
 	}
 }
 

@@ -61,6 +61,7 @@ class TreeNode {
 	public int data;
 	public TreeNode left;
 	public TreeNode right;
+	public TreeNode parent; // for 4.5
 	public TreeNode (int data) {
 		this.data = data;
 	}
@@ -102,6 +103,7 @@ class TreeNode {
 		return ans;
 	}
 }
+
 
 class Node {
 	public int data;

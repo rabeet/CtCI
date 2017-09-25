@@ -6,8 +6,9 @@ import java.util.Set;
 
 public class Utilities {
 	
-	static class Node {
-		
+	public static void main(String[] args) {
+		Integer[] arr = {1,2,5,null,3};
+		System.out.println(TreeNode.deSerializeTree(arr));
 	}
 
 }
@@ -66,15 +67,24 @@ class TreeNode {
 		this.data = data;
 	}
 	
-	public static TreeNode deSerializeTree(int[] arr) {
+	
+	public static TreeNode deSerializeTree(Integer[] arr) {
 		if (arr == null) return null;
 		return popNode(arr, 0);
 	}
 	
-	private static TreeNode popNode(int[] arr, int i) {
-
+	private static TreeNode popNode(Integer[] arr, int i) {
 		if (i >= arr.length) return null;
-		TreeNode node = new TreeNode(arr[i]);
+		TreeNode node = arr[i] == null ? null : new TreeNode(arr[i]);
+		if (node == null) {
+			// shift everything to the right one
+			for (int k = i; k < arr.length-1; k++) {
+				Integer temp = arr[k];
+				arr[k] = arr[k+1];
+				arr[k+1] = temp;
+			}
+			return node;
+		}
 		node.left = popNode(arr, 2*i+1);
 		node.right = popNode(arr, 2*i+2);
 		return node;

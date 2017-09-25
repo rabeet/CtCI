@@ -29,11 +29,12 @@ public class Prob4_8 {
 	 * going to give the second one a go
 	 */
 	public static void main(String[] args) {
-		int[] arr = {2,1,4,3,-1,0};
+		Integer[] arr = {2,1,4,3,-1,0};
 		TreeNode node = TreeNode.deSerializeTree(arr);
-		List<String> list = findPaths(node, -42);
+		List<String> list = findPaths(node, 4);
 		for (String s : list) {
 			System.out.println(s);
+			
 		}
 	}
 	

@@ -17,7 +17,7 @@ public class Prob4_7 {
 	 */
 
 	public static void main(String[] args) {
-		int[] arr = new int[10000];
+		Integer[] arr = new Integer[10000];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = i;
 		}

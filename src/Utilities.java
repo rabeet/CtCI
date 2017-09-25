@@ -66,7 +66,7 @@ class TreeNode {
 		this.data = data;
 	}
 	
-	public static TreeNode serializeTree(int[] arr) {
+	public static TreeNode deSerializeTree(int[] arr) {
 		if (arr == null) return null;
 		return popNode(arr, 0);
 	}

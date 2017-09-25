@@ -21,7 +21,7 @@ public class Prob4_7 {
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = i;
 		}
-		TreeNode large = TreeNode.serializeTree(arr);
+		TreeNode large = TreeNode.deSerializeTree(arr);
 		TreeNode small = large.right.left.left.right.left;
 		System.out.println(small.data);
 		System.out.println(isSubtree(large, small));

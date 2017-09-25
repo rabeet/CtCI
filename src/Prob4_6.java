@@ -10,7 +10,7 @@ public class Prob4_6 {
 	
 	public static void main(String[] args) {
 		int [] arr = {1,2,3,4,5,6,7,8,9};
-		TreeNode node = TreeNode.serializeTree(arr);
+		TreeNode node = TreeNode.deSerializeTree(arr);
 		firstCommonAncestor(node, node.left, node.left.left);
 		TreeNode n2 = firstCommonAncestor2(node, node.right.left, node.right.right);
 		System.out.println(n2.data);

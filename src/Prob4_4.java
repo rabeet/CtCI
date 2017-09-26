@@ -14,7 +14,7 @@ public class Prob4_4 {
 	 * 
 	 */
 	public static void main(String[] args) {
-		int[] arr = {5,2,6,1,3};
+		Integer[] arr = {5,2,6,1,3};
 		TreeNode node = TreeNode.deSerializeTree(arr);
 		System.out.println(node+"\n");
 		List<List<TreeNode>> list = bstLists(node);

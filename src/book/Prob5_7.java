@@ -14,7 +14,7 @@ public class Prob5_7 {
 	}
 	
 	public static int findMissingNum(int[] arr) {
-		TODO: Implement
+		return 0; // TODO
 	}
 
 }

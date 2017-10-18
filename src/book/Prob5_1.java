@@ -31,7 +31,7 @@ public class Prob5_1 {
 	public static int setBits(int n, int m, int i, int j) {
 		if (i > j || i > 31 || j > 31) return n;
 		if (m == 0) return n;
-		TODO: Look at better implementation
+//		TODO: Look at better implementation
 		int k = 0;
 		while (i <= j) {
 			int temp = (m >> k) & 1;

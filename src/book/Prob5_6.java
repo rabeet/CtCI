@@ -19,7 +19,9 @@ public class Prob5_6 {
 	 */
 
 	public static void main(String[] args) {
-//		System.out.println(moveBits(8));
+		System.out.println(moveBits(8));
+		Integer sn = Integer.valueOf("0101010101010101010101010101010", 2);
+		System.out.println(sn + " " + 0xAAAAAAAA);
 		System.out.println(Integer.MIN_VALUE>>2);
 	}
 	

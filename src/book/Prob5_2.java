@@ -19,7 +19,7 @@ public class Prob5_2 {
 	public static String toBinary(String num) {
 		if (num.indexOf(".") != -1) return "ERROR";
 		// Check for bounds
-		TODO: Look at better implementation in the book
+//		TODO: Look at better implementation in the book
 		Long n;
 		try {
 			n = Long.parseLong(num);
